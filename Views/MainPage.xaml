@@ -31,16 +31,50 @@
 
             <!-- Header -->
             <StackLayout Spacing="5">
-                <Label Text="Bonjour !"
-                       FontSize="28"
-                       FontAttributes="Bold">
-                    <Label.TextColor>
-                        <AppThemeBinding Light="{StaticResource LightTextPrimary}" Dark="{StaticResource DarkTextPrimary}" />
-                    </Label.TextColor>
-                </Label>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="StartAndExpand">
+                        <Label Text="Bonjour !"
+                               FontSize="28"
+                               FontAttributes="Bold">
+                            <Label.TextColor>
+                                <AppThemeBinding Light="{StaticResource LightTextPrimary}" Dark="{StaticResource DarkTextPrimary}" />
+                            </Label.TextColor>
+                        </Label>
+                    </StackLayout>
+
+                    <!-- Sync Button -->
+                    <Button Text="🔄"
+                            FontSize="24"
+                            WidthRequest="50"
+                            HeightRequest="50"
+                            CornerRadius="25"
+                            BackgroundColor="{StaticResource AccentColor}"
+                            TextColor="White"
+                            Command="{Binding SyncNotesCommand}"
+                            IsEnabled="{Binding IsSyncing, Converter={StaticResource InverseBooleanConverter}}"
+                            VerticalOptions="Center"
+                            Padding="0">
+                        <Button.Triggers>
+                            <DataTrigger TargetType="Button" Binding="{Binding IsSyncing}" Value="True">
+                                <Setter Property="Rotation" Value="360"/>
+                            </DataTrigger>
+                        </Button.Triggers>
+                    </Button>
+                </StackLayout>
 
                 <Label Text="Voici vos notes :"
                        FontSize="16">
+                    <Label.TextColor>
+                        <AppThemeBinding Light="{StaticResource LightTextSecondary}" Dark="{StaticResource DarkTextSecondary}" />
+                    </Label.TextColor>
+                </Label>
+
+                <!-- Sync Status -->
+                <Label Text="{Binding SyncStatus}"
+                       FontSize="14"
+                       FontAttributes="Italic"
+                       IsVisible="{Binding SyncStatus, Converter={StaticResource StringIsNotNullOrEmptyConverter}}"
+                       Margin="0,5,0,0">
                     <Label.TextColor>
                         <AppThemeBinding Light="{StaticResource LightTextSecondary}" Dark="{StaticResource DarkTextSecondary}" />
                     </Label.TextColor>

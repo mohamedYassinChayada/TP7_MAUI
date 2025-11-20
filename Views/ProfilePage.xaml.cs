@@ -5,10 +5,10 @@ namespace TP6.Views;
 
 public partial class ProfilePage : ContentPage
 {
-    public ProfilePage()
+    public ProfilePage(ProfileViewModel viewModel)
     {
         InitializeComponent();
-        BindingContext = new ProfileViewModel();
+        BindingContext = viewModel;
     }
 
     protected override void OnAppearing()

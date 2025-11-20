@@ -19,9 +19,18 @@ public static class MauiProgram
 		// Register Infrastructure services (repositories, web services, sync)
 		builder.Services.AddInfrastructure();
 
+		// Register legacy services
 		builder.Services.AddSingleton<TP6.Models.Business.NotesApiService>();
+
+		// Register ViewModels
 		builder.Services.AddTransient<TP6.ViewModels.MainViewModel>();
 		builder.Services.AddTransient<TP6.ViewModels.ProfileViewModel>();
+		builder.Services.AddTransient<TP6.ViewModels.CreateNoteViewModel>();
+
+		// Register Pages
+		builder.Services.AddTransient<TP6.Views.MainPage>();
+		builder.Services.AddTransient<TP6.Views.ProfilePage>();
+		builder.Services.AddTransient<TP6.Views.CreateNotePage>();
 
 	#if DEBUG
 		builder.Logging.AddDebug();

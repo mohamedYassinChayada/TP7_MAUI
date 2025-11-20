@@ -264,6 +264,14 @@
         <member name="T:TP6.ViewModels.MainViewModel">
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TP6.ViewModels.MainViewModel.IsSyncing">
+            <inheritdoc cref="F:TP6.ViewModels.MainViewModel.isSyncing"/>
+        </member>
+        <member name="P:TP6.ViewModels.MainViewModel.SyncStatus">
+            <inheritdoc cref="F:TP6.ViewModels.MainViewModel.syncStatus"/>
         </member>
         <member name="F:TP6.ViewModels.MainViewModel.navigateToCreateNoteCommand">
             <summary>The backing field for <see cref="P:TP6.ViewModels.MainViewModel.NavigateToCreateNoteCommand"/>.</summary>
@@ -276,6 +284,12 @@
         </member>
         <member name="P:TP6.ViewModels.MainViewModel.NavigateToProfileCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TP6.ViewModels.MainViewModel.NavigateToProfile"/>.</summary>
+        </member>
+        <member name="F:TP6.ViewModels.MainViewModel.syncNotesCommand">
+            <summary>The backing field for <see cref="P:TP6.ViewModels.MainViewModel.SyncNotesCommand"/>.</summary>
+        </member>
+        <member name="P:TP6.ViewModels.MainViewModel.SyncNotesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TP6.ViewModels.MainViewModel.SyncNotes"/>.</summary>
         </member>
         <member name="T:TP6.ViewModels.ProfileViewModel">
             <inheritdoc/>
@@ -346,6 +360,12 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Content">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Content" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsSyncing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsSyncing" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SyncStatus">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SyncStatus" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentUser">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentUser" generated properties.</summary>
         </member>
@@ -369,6 +389,12 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Content">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Content" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsSyncing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsSyncing" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SyncStatus">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SyncStatus" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentUser">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentUser" generated properties.</summary>

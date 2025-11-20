@@ -30,7 +30,7 @@
     <AppXManifest Include="C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-11-20T15:59:09.765</Modified>
+      <Modified>2025-11-20T16:20:43.286</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TP6.dll">
       <PackagePath>TP6.dll</PackagePath>
-      <Modified>2025-11-20T15:58:17.898</Modified>
+      <Modified>2025-11-20T16:19:07.372</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>TP6.exe</PackagePath>
-      <Modified>2025-11-20T15:58:17.901</Modified>
+      <Modified>2025-11-20T16:19:07.378</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>

@@ -4,9 +4,9 @@ namespace TP6.Views;
 
 public partial class CreateNotePage : ContentPage
 {
-    public CreateNotePage()
+    public CreateNotePage(CreateNoteViewModel viewModel)
     {
         InitializeComponent();
-        BindingContext = new CreateNoteViewModel();
+        BindingContext = viewModel;
     }
 }
