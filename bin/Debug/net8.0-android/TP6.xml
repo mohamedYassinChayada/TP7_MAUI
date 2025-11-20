@@ -218,6 +218,26 @@
             Internal class to map JSONPlaceholder user structure
             </summary>
         </member>
+        <member name="T:TP6.Services.ThemeService">
+            <summary>
+            Service to manage application-wide theme (Light/Dark mode)
+            </summary>
+        </member>
+        <member name="M:TP6.Services.ThemeService.ApplyTheme">
+            <summary>
+            Apply theme based on user's dark mode preference
+            </summary>
+        </member>
+        <member name="M:TP6.Services.ThemeService.ToggleTheme">
+            <summary>
+            Toggle between light and dark mode
+            </summary>
+        </member>
+        <member name="M:TP6.Services.ThemeService.IsDarkMode">
+            <summary>
+            Get current dark mode state
+            </summary>
+        </member>
         <member name="T:TP6.ViewModels.CreateNoteViewModel">
             <inheritdoc/>
             <inheritdoc/>

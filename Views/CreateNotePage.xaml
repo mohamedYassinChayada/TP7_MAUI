@@ -2,46 +2,129 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TP6.Views.CreateNotePage"
-             Title="Nouvelle Note"
-             BackgroundColor="#ECF0F1">
+             Title="Nouvelle Note">
 
-    <StackLayout Padding="20" Spacing="15">
-    
-        <Label Text="Titre : " 
-               FontSize="16" 
-               TextColor="#2C3E50" />
-               
-        <Entry Text="{Binding Title}" 
-               Placeholder="" 
-               BackgroundColor="White"
-               TextColor="#2C3E50" />
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Light mode colors -->
+            <Color x:Key="LightBackground">#F5F5F5</Color>
+            <Color x:Key="LightCardBackground">#FFFFFF</Color>
+            <Color x:Key="LightTextPrimary">#1A1A1A</Color>
+            <Color x:Key="LightTextSecondary">#666666</Color>
+            <Color x:Key="LightInputBackground">#FFFFFF</Color>
 
-        <Label Text="Contenu :" 
-               FontSize="16" 
-               TextColor="#2C3E50" />
-               
-        <Editor Text="{Binding Content}" 
-                HeightRequest="150"
-                BackgroundColor="White"
-                TextColor="#2C3E50"
-                Placeholder="contenu" />
+            <!-- Dark mode colors -->
+            <Color x:Key="DarkBackground">#121212</Color>
+            <Color x:Key="DarkCardBackground">#1E1E1E</Color>
+            <Color x:Key="DarkTextPrimary">#FFFFFF</Color>
+            <Color x:Key="DarkTextSecondary">#B0B0B0</Color>
+            <Color x:Key="DarkInputBackground">#2C2C2C</Color>
 
-        <StackLayout Spacing="10" Margin="0,20,0,0">
-            <Button Text="Enregistrer" 
-                    BackgroundColor="#3498DB" 
-                    TextColor="White" 
-                    FontSize="16" 
-                    CornerRadius="5"
-                    Command="{Binding SaveCommand}" />
-                    
-            <Button Text="Retour" 
-                    BackgroundColor="#3498DB" 
-                    TextColor="White" 
-                    FontSize="16" 
-                    CornerRadius="5"
-                    Command="{Binding CancelCommand}" />
+            <!-- Accent colors -->
+            <Color x:Key="PrimaryColor">#3498DB</Color>
+            <Color x:Key="SecondaryColor">#95A5A6</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+
+            <!-- Header -->
+            <Label Text="Créer une nouvelle note"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   Margin="0,0,0,10">
+                <Label.TextColor>
+                    <AppThemeBinding Light="{StaticResource LightTextPrimary}" Dark="{StaticResource DarkTextPrimary}" />
+                </Label.TextColor>
+            </Label>
+
+            <!-- Title Input -->
+            <StackLayout Spacing="8">
+                <Label Text="Titre"
+                       FontSize="14"
+                       FontAttributes="Bold">
+                    <Label.TextColor>
+                        <AppThemeBinding Light="{StaticResource LightTextSecondary}" Dark="{StaticResource DarkTextSecondary}" />
+                    </Label.TextColor>
+                </Label>
+
+                <Frame Padding="0"
+                       CornerRadius="8"
+                       HasShadow="False"
+                       BorderColor="#E0E0E0">
+                    <Frame.BackgroundColor>
+                        <AppThemeBinding Light="{StaticResource LightInputBackground}" Dark="{StaticResource DarkInputBackground}" />
+                    </Frame.BackgroundColor>
+
+                    <Entry Text="{Binding Title}"
+                           Placeholder="Entrez un titre..."
+                           FontSize="16"
+                           Margin="10,0">
+                        <Entry.TextColor>
+                            <AppThemeBinding Light="{StaticResource LightTextPrimary}" Dark="{StaticResource DarkTextPrimary}" />
+                        </Entry.TextColor>
+                        <Entry.PlaceholderColor>
+                            <AppThemeBinding Light="{StaticResource LightTextSecondary}" Dark="{StaticResource DarkTextSecondary}" />
+                        </Entry.PlaceholderColor>
+                    </Entry>
+                </Frame>
+            </StackLayout>
+
+            <!-- Content Input -->
+            <StackLayout Spacing="8">
+                <Label Text="Contenu"
+                       FontSize="14"
+                       FontAttributes="Bold">
+                    <Label.TextColor>
+                        <AppThemeBinding Light="{StaticResource LightTextSecondary}" Dark="{StaticResource DarkTextSecondary}" />
+                    </Label.TextColor>
+                </Label>
+
+                <Frame Padding="10"
+                       CornerRadius="8"
+                       HasShadow="False"
+                       BorderColor="#E0E0E0">
+                    <Frame.BackgroundColor>
+                        <AppThemeBinding Light="{StaticResource LightInputBackground}" Dark="{StaticResource DarkInputBackground}" />
+                    </Frame.BackgroundColor>
+
+                    <Editor Text="{Binding Content}"
+                            HeightRequest="200"
+                            Placeholder="Écrivez votre note ici..."
+                            FontSize="16"
+                            AutoSize="TextChanges">
+                        <Editor.TextColor>
+                            <AppThemeBinding Light="{StaticResource LightTextPrimary}" Dark="{StaticResource DarkTextPrimary}" />
+                        </Editor.TextColor>
+                        <Editor.PlaceholderColor>
+                            <AppThemeBinding Light="{StaticResource LightTextSecondary}" Dark="{StaticResource DarkTextSecondary}" />
+                        </Editor.PlaceholderColor>
+                    </Editor>
+                </Frame>
+            </StackLayout>
+
+            <!-- Action Buttons -->
+            <StackLayout Spacing="12" Margin="0,20,0,20">
+                <Button Text="💾 Enregistrer"
+                        BackgroundColor="{StaticResource PrimaryColor}"
+                        TextColor="White"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        CornerRadius="12"
+                        HeightRequest="50"
+                        Command="{Binding SaveCommand}" />
+
+                <Button Text="Annuler"
+                        BackgroundColor="{StaticResource SecondaryColor}"
+                        TextColor="White"
+                        FontSize="16"
+                        CornerRadius="12"
+                        HeightRequest="50"
+                        Command="{Binding CancelCommand}" />
+            </StackLayout>
+
         </StackLayout>
-        
-    </StackLayout>
+    </ScrollView>
 
 </ContentPage>

@@ -30,25 +30,25 @@
     <AppXManifest Include="C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-11-20T15:40:42.761</Modified>
+      <Modified>2025-11-20T15:59:09.765</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-11-20T15:40:42.682</Modified>
+      <Modified>2025-11-20T15:46:41.853</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TP6.runtimeconfig.json">
       <PackagePath>TP6.runtimeconfig.json</PackagePath>
-      <Modified>2025-11-20T15:40:42.633</Modified>
+      <Modified>2025-11-20T15:46:41.614</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TP6.dll">
       <PackagePath>TP6.dll</PackagePath>
-      <Modified>2025-11-20T15:40:42.358</Modified>
+      <Modified>2025-11-20T15:58:17.898</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>TP6.exe</PackagePath>
-      <Modified>2025-11-20T15:40:42.361</Modified>
+      <Modified>2025-11-20T15:58:17.901</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -56,23 +56,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2025-11-20T14:47:41.982</Modified>
+      <Modified>2025-11-20T15:46:10.388</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2025-11-20T14:47:42.000</Modified>
+      <Modified>2025-11-20T15:46:10.406</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2025-11-20T14:47:42.046</Modified>
+      <Modified>2025-11-20T15:46:10.431</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2025-11-20T14:47:42.086</Modified>
+      <Modified>2025-11-20T15:46:10.467</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2025-11-20T14:47:42.234</Modified>
+      <Modified>2025-11-20T15:46:10.608</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -84,211 +84,211 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2025-11-20T14:47:43.195</Modified>
+      <Modified>2025-11-20T15:46:11.463</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.459</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.454</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.454</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.454</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.454</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.460</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.460</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.459</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.460</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.460</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.463</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.463</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.463</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.463</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.462</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.462</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.462</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.460</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.462</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.460</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.180</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.179</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.179</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.179</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.165</Modified>
+      <Modified>2025-11-20T15:46:11.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2025-11-20T14:47:43.165</Modified>
+      <Modified>2025-11-20T15:46:11.444</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TP6.deps.json">
       <PackagePath>TP6.deps.json</PackagePath>
-      <Modified>2025-11-20T15:40:42.630</Modified>
+      <Modified>2025-11-20T15:46:41.585</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\altya\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.57\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

@@ -9,12 +9,17 @@ C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Ap
 C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Mvvm.dll
 C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.dll
 C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Diagnostics.dll
+C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Http.dll
 C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Logging.dll
 C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Logging.Debug.dll
 C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Options.dll
+C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Primitives.dll
 C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Graphics.Canvas.Interop.dll
 C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.IO.RecyclableMemoryStream.dll
@@ -160,6 +165,7 @@ C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ma
 C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\TP6.AssemblyInfoInputs.cache
 C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\TP6.AssemblyInfo.cs
 C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\TP6.csproj.CoreCompileInputs.cache
+C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\TP6.sourcelink.json
 C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\XamlC.stamp
 C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\TP6.csproj.Up2Date
 C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\TP6.dll
@@ -183,9 +189,3 @@ C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qu
 C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
-C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Binder.dll
-C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Diagnostics.dll
-C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Diagnostics.Abstractions.dll
-C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Http.dll
-C:\Users\altya\Desktop\tp6\TP6\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Options.ConfigurationExtensions.dll
-C:\Users\altya\Desktop\tp6\TP6\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\TP6.sourcelink.json

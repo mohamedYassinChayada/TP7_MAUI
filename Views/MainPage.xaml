@@ -2,52 +2,129 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TP6.Views.MainPage"
-             Title="Accueil"
-             BackgroundColor="#ECF0F1">
+             Title="Accueil">
 
-    <StackLayout Padding="20" Spacing="15">
-        
-        <Label Text="Bonjour !" 
-               FontSize="18" 
-               FontAttributes="Bold" 
-               TextColor="#2C3E50" />
-               
-        <Label Text="Voici vos notes :" 
-               FontSize="16" 
-               TextColor="#2C3E50" />
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Light mode colors -->
+            <Color x:Key="LightBackground">#F5F5F5</Color>
+            <Color x:Key="LightCardBackground">#FFFFFF</Color>
+            <Color x:Key="LightTextPrimary">#1A1A1A</Color>
+            <Color x:Key="LightTextSecondary">#666666</Color>
+            <Color x:Key="LightBorder">#E0E0E0</Color>
 
-        <CollectionView ItemsSource="{Binding Notes}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout Padding="10" 
-                                 BackgroundColor="White" 
-                                 Margin="0,5,0,5">
-                        <Label Text="{Binding Title}" 
-                               FontAttributes="Bold" 
-                               FontSize="16"
-                               TextColor="#2C3E50" />
-                    </StackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+            <!-- Dark mode colors -->
+            <Color x:Key="DarkBackground">#121212</Color>
+            <Color x:Key="DarkCardBackground">#1E1E1E</Color>
+            <Color x:Key="DarkTextPrimary">#FFFFFF</Color>
+            <Color x:Key="DarkTextSecondary">#B0B0B0</Color>
+            <Color x:Key="DarkBorder">#2C2C2C</Color>
 
-        <StackLayout Spacing="10" Margin="0,20,0,0">
-            <Button Text="Nouvelle note" 
-                    BackgroundColor="#3498DB" 
-                    TextColor="White" 
-                    FontSize="16" 
-                    CornerRadius="5"
-                    Command="{Binding NavigateToCreateNoteCommand}" />
-                    
-            <Button Text="Mon profil" 
-                    BackgroundColor="#3498DB" 
-                    TextColor="White" 
-                    FontSize="16" 
-                    CornerRadius="5"
-                    Command="{Binding NavigateToProfileCommand}" />
+            <!-- Accent colors -->
+            <Color x:Key="PrimaryColor">#3498DB</Color>
+            <Color x:Key="AccentColor">#2ECC71</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+
+            <!-- Header -->
+            <StackLayout Spacing="5">
+                <Label Text="Bonjour !"
+                       FontSize="28"
+                       FontAttributes="Bold">
+                    <Label.TextColor>
+                        <AppThemeBinding Light="{StaticResource LightTextPrimary}" Dark="{StaticResource DarkTextPrimary}" />
+                    </Label.TextColor>
+                </Label>
+
+                <Label Text="Voici vos notes :"
+                       FontSize="16">
+                    <Label.TextColor>
+                        <AppThemeBinding Light="{StaticResource LightTextSecondary}" Dark="{StaticResource DarkTextSecondary}" />
+                    </Label.TextColor>
+                </Label>
+            </StackLayout>
+
+            <!-- Notes Collection -->
+            <CollectionView ItemsSource="{Binding Notes}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="15"
+                               Margin="0,0,0,12"
+                               CornerRadius="12"
+                               HasShadow="True">
+                            <Frame.BackgroundColor>
+                                <AppThemeBinding Light="{StaticResource LightCardBackground}" Dark="{StaticResource DarkCardBackground}" />
+                            </Frame.BackgroundColor>
+
+                            <StackLayout Spacing="8">
+                                <!-- Note Title -->
+                                <Label Text="{Binding Title}"
+                                       FontAttributes="Bold"
+                                       FontSize="18"
+                                       LineBreakMode="TailTruncation"
+                                       MaxLines="2">
+                                    <Label.TextColor>
+                                        <AppThemeBinding Light="{StaticResource LightTextPrimary}" Dark="{StaticResource DarkTextPrimary}" />
+                                    </Label.TextColor>
+                                </Label>
+
+                                <!-- Note Content Preview -->
+                                <Label Text="{Binding Content}"
+                                       FontSize="14"
+                                       LineBreakMode="TailTruncation"
+                                       MaxLines="3"
+                                       Margin="0,0,0,8">
+                                    <Label.TextColor>
+                                        <AppThemeBinding Light="{StaticResource LightTextSecondary}" Dark="{StaticResource DarkTextSecondary}" />
+                                    </Label.TextColor>
+                                </Label>
+
+                                <!-- Note Date -->
+                                <Label Text="{Binding CreatedAt, StringFormat='{0:dd/MM/yyyy HH:mm}'}"
+                                       FontSize="12"
+                                       FontAttributes="Italic">
+                                    <Label.TextColor>
+                                        <AppThemeBinding Light="{StaticResource LightTextSecondary}" Dark="{StaticResource DarkTextSecondary}" />
+                                    </Label.TextColor>
+                                </Label>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- Action Buttons -->
+            <StackLayout Spacing="12" Margin="0,10,0,20">
+                <Button Text="✏️ Nouvelle note"
+                        BackgroundColor="{StaticResource PrimaryColor}"
+                        TextColor="White"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        CornerRadius="12"
+                        HeightRequest="50"
+                        Command="{Binding NavigateToCreateNoteCommand}" />
+
+                <Button Text="👤 Mon profil"
+                        TextColor="{StaticResource PrimaryColor}"
+                        FontSize="16"
+                        CornerRadius="12"
+                        HeightRequest="50"
+                        BorderWidth="2"
+                        Command="{Binding NavigateToProfileCommand}">
+                    <Button.BackgroundColor>
+                        <AppThemeBinding Light="Transparent" Dark="Transparent" />
+                    </Button.BackgroundColor>
+                    <Button.BorderColor>
+                        <AppThemeBinding Light="{StaticResource PrimaryColor}" Dark="{StaticResource PrimaryColor}" />
+                    </Button.BorderColor>
+                </Button>
+            </StackLayout>
+
         </StackLayout>
-        
-    </StackLayout>
+    </ScrollView>
 
 </ContentPage>
 
