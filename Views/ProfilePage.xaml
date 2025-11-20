@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TP6.Views.ProfilePage"
+             Title="Profil"
+             BackgroundColor="#ECF0F1">
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+            
+     
+            <Frame WidthRequest="100" HeightRequest="100" 
+                   CornerRadius="50" 
+                   HorizontalOptions="Center" 
+                   BackgroundColor="#3498DB">
+                <Label Text="[ ]" 
+                       FontSize="40" 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center" 
+                       TextColor="White" />
+            </Frame>
+            
+            <StackLayout>
+                <Label Text="{Binding CurrentUser.FullName}" 
+                       FontSize="18" 
+                       FontAttributes="Bold" 
+                       HorizontalOptions="Center" 
+                       TextColor="#2C3E50" 
+                       Margin="0,0,0,10" />
+                       
+                <Button Text="Modifier profil" 
+                        BackgroundColor="#E74C3C" 
+                        TextColor="White" 
+                        FontSize="14" 
+                        CornerRadius="5"
+                        HorizontalOptions="Center"
+                        Command="{Binding StartEditCommand}" />
+            </StackLayout>
+            
+            <StackLayout IsVisible="{Binding IsEditing}" Spacing="10">
+                <Label Text="Prénom :" 
+                       FontSize="16" 
+                       TextColor="#2C3E50" />
+                <Entry Text="{Binding EditFirstName}" 
+                       BackgroundColor="White"
+                       TextColor="#2C3E50" />
+                       
+                <Label Text="Nom :" 
+                       FontSize="16" 
+                       TextColor="#2C3E50" />
+                <Entry Text="{Binding EditLastName}" 
+                       BackgroundColor="White"
+                       TextColor="#2C3E50" />
+                       
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
+                    <Button Text="Sauvegarder" 
+                            BackgroundColor="#27AE60" 
+                            TextColor="White" 
+                            FontSize="14" 
+                            CornerRadius="5"
+                            Command="{Binding SaveProfileCommand}" />
+                            
+                    <Button Text="Annuler" 
+                            BackgroundColor="#95A5A6" 
+                            TextColor="White" 
+                            FontSize="14" 
+                            CornerRadius="5"
+                            Command="{Binding CancelEditCommand}" />
+                </StackLayout>
+            </StackLayout>
+
+            <Label Text="Statistiques :" 
+                   FontSize="16" 
+                   FontAttributes="Bold" 
+                   TextColor="#2C3E50" />
+            
+            <Label Text="{Binding NotesCount, StringFormat='• {0} notes créées'}"
+                   FontSize="16"
+                   TextColor="#2C3E50" 
+                   Margin="10,0,0,5" />
+                   
+            <Label Text="{Binding MemberSinceDays}" 
+                   FontSize="16" 
+                   TextColor="#2C3E50" 
+                   Margin="10,0,0,20" />
+            
+            <Label Text="Paramètres :" 
+                   FontSize="16" 
+                   FontAttributes="Bold" 
+                   TextColor="#2C3E50" />
+            
+            <StackLayout Orientation="Horizontal" Margin="10,0,0,5">
+                <CheckBox IsChecked="{Binding CurrentUser.NotificationsEnabled}" />
+                <Label Text="Notifications" 
+                       FontSize="16" 
+                       TextColor="#2C3E50" 
+                       VerticalOptions="Center" />
+                <Button Text="Toggle" 
+                        BackgroundColor="Transparent" 
+                        TextColor="#3498DB" 
+                        FontSize="12"
+                        HorizontalOptions="EndAndExpand"
+                        Command="{Binding ToggleNotificationsCommand}" />
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal" Margin="10,0,0,20">
+                <CheckBox IsChecked="{Binding CurrentUser.DarkModeEnabled}" />
+                <Label Text="Mode sombre" 
+                       FontSize="16" 
+                       TextColor="#2C3E50" 
+                       VerticalOptions="Center" />
+                <Button Text="Toggle" 
+                        BackgroundColor="Transparent" 
+                        TextColor="#3498DB" 
+                        FontSize="12"
+                        HorizontalOptions="EndAndExpand"
+                        Command="{Binding ToggleDarkModeCommand}" />
+            </StackLayout>
+            
+            <Button Text="Retour" 
+                    BackgroundColor="#3498DB" 
+                    TextColor="White" 
+                    FontSize="16" 
+                    CornerRadius="5" 
+                    Margin="0,20,0,0" 
+                    Command="{Binding GoBackCommand}" />
+                    
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

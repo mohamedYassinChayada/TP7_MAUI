@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TP6.Views.MainPage"
+             Title="Accueil"
+             BackgroundColor="#ECF0F1">
+
+    <StackLayout Padding="20" Spacing="15">
+        
+        <Label Text="Bonjour !" 
+               FontSize="18" 
+               FontAttributes="Bold" 
+               TextColor="#2C3E50" />
+               
+        <Label Text="Voici vos notes :" 
+               FontSize="16" 
+               TextColor="#2C3E50" />
+
+        <CollectionView ItemsSource="{Binding Notes}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10" 
+                                 BackgroundColor="White" 
+                                 Margin="0,5,0,5">
+                        <Label Text="{Binding Title}" 
+                               FontAttributes="Bold" 
+                               FontSize="16"
+                               TextColor="#2C3E50" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <StackLayout Spacing="10" Margin="0,20,0,0">
+            <Button Text="Nouvelle note" 
+                    BackgroundColor="#3498DB" 
+                    TextColor="White" 
+                    FontSize="16" 
+                    CornerRadius="5"
+                    Command="{Binding NavigateToCreateNoteCommand}" />
+                    
+            <Button Text="Mon profil" 
+                    BackgroundColor="#3498DB" 
+                    TextColor="White" 
+                    FontSize="16" 
+                    CornerRadius="5"
+                    Command="{Binding NavigateToProfileCommand}" />
+        </StackLayout>
+        
+    </StackLayout>
+
+</ContentPage>
+
