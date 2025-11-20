@@ -22,13 +22,13 @@ public class NoteDAO : IDaoNote{
     }
 
     public int Insert(Note note){
-        var query = @"insert into Note (Id, Title, Content, CreatedAt) values (?, ?, ?, ?)";
-        return _database.Execute(query, note.Id, note.Title, note.Content, note.CreatedAt.ToString("o"));
+        var query = @"insert into Note (Id, Title, Content, CreatedAt, IsSynced, PendingSync) values (?, ?, ?, ?, ?, ?)";
+        return _database.Execute(query, note.Id, note.Title, note.Content, note.CreatedAt.ToString("o"), note.IsSynced ? 1 : 0, note.PendingSync ? 1 : 0);
     }
 
     public int Update(Note note){
-        var query = @"update Note set Title = ?, Content = ?, CreatedAt = ? where Id = ?";
-        return _database.Execute(query, note.Title, note.Content, note.CreatedAt.ToString("o"), note.Id);
+        var query = @"update Note set Title = ?, Content = ?, CreatedAt = ?, IsSynced = ?, PendingSync = ? where Id = ?";
+        return _database.Execute(query, note.Title, note.Content, note.CreatedAt.ToString("o"), note.IsSynced ? 1 : 0, note.PendingSync ? 1 : 0, note.Id);
     }
 
     public int Delete(object id){

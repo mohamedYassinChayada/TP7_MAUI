@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using TP6.Infrastructure;
 
 namespace TP6;
 
@@ -14,6 +15,9 @@ public static class MauiProgram
 			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 			fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 		    });
+
+		// Register Infrastructure services (repositories, web services, sync)
+		builder.Services.AddInfrastructure();
 
 		builder.Services.AddSingleton<TP6.Models.Business.NotesApiService>();
 		builder.Services.AddTransient<TP6.ViewModels.MainViewModel>();

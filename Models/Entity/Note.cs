@@ -9,4 +9,6 @@ public class Note
     public string Title { get; set; } = string.Empty;
     public string Content { get; set; } = string.Empty;
     public DateTime CreatedAt { get; set; } = DateTime.Now;
+    public bool IsSynced { get; set; } = false;
+    public bool PendingSync { get; set; } = false;
 }

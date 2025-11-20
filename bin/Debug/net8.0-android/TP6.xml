@@ -1,0 +1,366 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TP6</name>
+    </assembly>
+    <members>
+        <member name="T:TP6.Core.Interfaces.INoteRemoteService">
+            <summary>
+            Remote service interface for Note API operations using JSONPlaceholder
+            Note: JSONPlaceholder does not persist write changes; POST/PUT/DELETE return simulated success
+            </summary>
+        </member>
+        <member name="M:TP6.Core.Interfaces.INoteRemoteService.GetNotesAsync(System.Threading.CancellationToken)">
+            <summary>
+            Gets all notes from remote API (maps to GET /posts)
+            </summary>
+        </member>
+        <member name="M:TP6.Core.Interfaces.INoteRemoteService.GetNoteAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Gets a single note by ID from remote API (maps to GET /posts/{id})
+            </summary>
+            <param name="id">The note identifier (maps to post ID)</param>
+        </member>
+        <member name="M:TP6.Core.Interfaces.INoteRemoteService.CreateNoteAsync(TP6.Models.Entity.Note,System.Threading.CancellationToken)">
+            <summary>
+            Creates a new note on remote API (maps to POST /posts)
+            Note: JSONPlaceholder simulates success but does not persist the data
+            </summary>
+        </member>
+        <member name="M:TP6.Core.Interfaces.INoteRemoteService.UpdateNoteAsync(TP6.Models.Entity.Note,System.Threading.CancellationToken)">
+            <summary>
+            Updates an existing note on remote API (maps to PUT /posts/{id})
+            Note: JSONPlaceholder simulates success but does not persist changes
+            </summary>
+        </member>
+        <member name="M:TP6.Core.Interfaces.INoteRemoteService.DeleteNoteAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a note from remote API (maps to DELETE /posts/{id})
+            Note: JSONPlaceholder simulates success but does not actually delete
+            </summary>
+            <param name="id">The note identifier to delete</param>
+        </member>
+        <member name="T:TP6.Core.Interfaces.INoteRepository">
+            <summary>
+            Repository interface for local Note data access
+            </summary>
+        </member>
+        <member name="M:TP6.Core.Interfaces.INoteRepository.GetAllAsync(System.Threading.CancellationToken)">
+            <summary>
+            Gets all notes from local storage, ordered by creation date descending
+            </summary>
+        </member>
+        <member name="M:TP6.Core.Interfaces.INoteRepository.GetByIdAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets a note by its unique identifier
+            </summary>
+        </member>
+        <member name="M:TP6.Core.Interfaces.INoteRepository.GetPendingSyncAsync(System.Threading.CancellationToken)">
+            <summary>
+            Gets notes that are pending synchronization with remote service
+            </summary>
+        </member>
+        <member name="M:TP6.Core.Interfaces.INoteRepository.UpsertAsync(TP6.Models.Entity.Note,System.Threading.CancellationToken)">
+            <summary>
+            Inserts a new note or updates existing note (upsert operation)
+            </summary>
+        </member>
+        <member name="M:TP6.Core.Interfaces.INoteRepository.InsertAsync(TP6.Models.Entity.Note,System.Threading.CancellationToken)">
+            <summary>
+            Inserts a new note into local storage
+            </summary>
+        </member>
+        <member name="M:TP6.Core.Interfaces.INoteRepository.UpdateAsync(TP6.Models.Entity.Note,System.Threading.CancellationToken)">
+            <summary>
+            Updates an existing note in local storage
+            </summary>
+        </member>
+        <member name="M:TP6.Core.Interfaces.INoteRepository.DeleteAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a note by its identifier
+            </summary>
+        </member>
+        <member name="M:TP6.Core.Interfaces.INoteRepository.DeleteAllAsync(System.Threading.CancellationToken)">
+            <summary>
+            Deletes all notes from local storage
+            </summary>
+        </member>
+        <member name="T:TP6.Core.Interfaces.ISyncService">
+            <summary>
+            Service interface for synchronizing notes between local storage and remote API
+            </summary>
+        </member>
+        <member name="M:TP6.Core.Interfaces.ISyncService.SyncNotesAsync(System.Threading.CancellationToken)">
+            <summary>
+            Synchronizes notes between local and remote storage
+            - Pull: Fetches all remote notes and upserts them into local storage
+            - Push (optional): Uploads pending local notes to remote API and marks them as synced
+            </summary>
+        </member>
+        <member name="M:TP6.Core.Interfaces.ISyncService.PullNotesAsync(System.Threading.CancellationToken)">
+            <summary>
+            Pulls all notes from remote API and stores them locally
+            </summary>
+        </member>
+        <member name="M:TP6.Core.Interfaces.ISyncService.PushNotesAsync(System.Threading.CancellationToken)">
+            <summary>
+            Pushes pending local notes to remote API
+            Note: JSONPlaceholder does not persist changes, so this simulates the push operation
+            </summary>
+        </member>
+        <member name="T:TP6.Core.Interfaces.IUserProfileRemoteService">
+            <summary>
+            Remote service interface for User Profile API operations using JSONPlaceholder
+            </summary>
+        </member>
+        <member name="M:TP6.Core.Interfaces.IUserProfileRemoteService.GetUserAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Gets user profile data from remote API (maps to GET /users/{id})
+            </summary>
+            <param name="id">The user identifier (default: 1)</param>
+        </member>
+        <member name="T:TP6.Infrastructure.DependencyInjection">
+            <summary>
+            Extension class for registering Infrastructure layer dependencies
+            </summary>
+        </member>
+        <member name="M:TP6.Infrastructure.DependencyInjection.AddInfrastructure(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Registers all Infrastructure services including repositories, web services, and sync services
+            </summary>
+            <param name="services">The service collection to add services to</param>
+            <returns>The service collection for chaining</returns>
+        </member>
+        <member name="T:TP6.Infrastructure.Repositories.NoteRepository">
+            <summary>
+            Repository implementation for local Note data access using SQLite
+            </summary>
+        </member>
+        <member name="T:TP6.Infrastructure.Sync.NotesSyncService">
+            <summary>
+            Service for synchronizing notes between local storage and remote API
+            Orchestrates pull (remote to local) and push (local to remote) operations
+            </summary>
+        </member>
+        <member name="M:TP6.Infrastructure.Sync.NotesSyncService.SyncNotesAsync(System.Threading.CancellationToken)">
+            <summary>
+            Synchronizes notes between local and remote storage
+            - Pull: Fetches all remote notes and upserts them into local storage
+            - Push: Uploads pending local notes to remote API and marks them as synced
+            </summary>
+        </member>
+        <member name="M:TP6.Infrastructure.Sync.NotesSyncService.PullNotesAsync(System.Threading.CancellationToken)">
+            <summary>
+            Pulls all notes from remote API and stores them locally
+            Remote notes are marked as synced and not pending
+            </summary>
+        </member>
+        <member name="M:TP6.Infrastructure.Sync.NotesSyncService.PushNotesAsync(System.Threading.CancellationToken)">
+            <summary>
+            Pushes pending local notes to remote API
+            Note: JSONPlaceholder does not persist changes, so this simulates the push operation
+            After successful push (simulated), notes are marked as synced locally
+            </summary>
+        </member>
+        <member name="T:TP6.Infrastructure.WebServices.NotesRemoteService">
+            <summary>
+            Remote service implementation for Note API operations using JSONPlaceholder
+            Note: JSONPlaceholder does not persist write changes; POST/PUT/DELETE return simulated success
+            </summary>
+        </member>
+        <member name="M:TP6.Infrastructure.WebServices.NotesRemoteService.GetNotesAsync(System.Threading.CancellationToken)">
+            <summary>
+            Gets all notes from remote API (maps to GET /posts)
+            JSONPlaceholder posts are mapped to Note entities
+            </summary>
+        </member>
+        <member name="M:TP6.Infrastructure.WebServices.NotesRemoteService.GetNoteAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Gets a single note by ID from remote API (maps to GET /posts/{id})
+            </summary>
+        </member>
+        <member name="M:TP6.Infrastructure.WebServices.NotesRemoteService.CreateNoteAsync(TP6.Models.Entity.Note,System.Threading.CancellationToken)">
+            <summary>
+            Creates a new note on remote API (maps to POST /posts)
+            Note: JSONPlaceholder simulates success but does not persist the data
+            </summary>
+        </member>
+        <member name="M:TP6.Infrastructure.WebServices.NotesRemoteService.UpdateNoteAsync(TP6.Models.Entity.Note,System.Threading.CancellationToken)">
+            <summary>
+            Updates an existing note on remote API (maps to PUT /posts/{id})
+            Note: JSONPlaceholder simulates success but does not persist changes
+            </summary>
+        </member>
+        <member name="M:TP6.Infrastructure.WebServices.NotesRemoteService.DeleteNoteAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a note from remote API (maps to DELETE /posts/{id})
+            Note: JSONPlaceholder simulates success but does not actually delete
+            </summary>
+        </member>
+        <member name="T:TP6.Infrastructure.WebServices.NotesRemoteService.JsonPlaceholderPost">
+            <summary>
+            Internal class to map JSONPlaceholder post structure
+            </summary>
+        </member>
+        <member name="T:TP6.Infrastructure.WebServices.UserProfileRemoteService">
+            <summary>
+            Remote service implementation for User Profile API operations using JSONPlaceholder
+            </summary>
+        </member>
+        <member name="M:TP6.Infrastructure.WebServices.UserProfileRemoteService.GetUserAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Gets user profile data from remote API (maps to GET /users/{id})
+            JSONPlaceholder user data is mapped to User entity
+            </summary>
+        </member>
+        <member name="T:TP6.Infrastructure.WebServices.UserProfileRemoteService.JsonPlaceholderUser">
+            <summary>
+            Internal class to map JSONPlaceholder user structure
+            </summary>
+        </member>
+        <member name="T:TP6.ViewModels.CreateNoteViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TP6.ViewModels.CreateNoteViewModel.Title">
+            <inheritdoc cref="F:TP6.ViewModels.CreateNoteViewModel.title"/>
+        </member>
+        <member name="P:TP6.ViewModels.CreateNoteViewModel.Content">
+            <inheritdoc cref="F:TP6.ViewModels.CreateNoteViewModel.content"/>
+        </member>
+        <member name="F:TP6.ViewModels.CreateNoteViewModel.saveCommand">
+            <summary>The backing field for <see cref="P:TP6.ViewModels.CreateNoteViewModel.SaveCommand"/>.</summary>
+        </member>
+        <member name="P:TP6.ViewModels.CreateNoteViewModel.SaveCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TP6.ViewModels.CreateNoteViewModel.Save"/>.</summary>
+        </member>
+        <member name="F:TP6.ViewModels.CreateNoteViewModel.cancelCommand">
+            <summary>The backing field for <see cref="P:TP6.ViewModels.CreateNoteViewModel.CancelCommand"/>.</summary>
+        </member>
+        <member name="P:TP6.ViewModels.CreateNoteViewModel.CancelCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TP6.ViewModels.CreateNoteViewModel.Cancel"/>.</summary>
+        </member>
+        <member name="T:TP6.ViewModels.MainViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:TP6.ViewModels.MainViewModel.navigateToCreateNoteCommand">
+            <summary>The backing field for <see cref="P:TP6.ViewModels.MainViewModel.NavigateToCreateNoteCommand"/>.</summary>
+        </member>
+        <member name="P:TP6.ViewModels.MainViewModel.NavigateToCreateNoteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TP6.ViewModels.MainViewModel.NavigateToCreateNote"/>.</summary>
+        </member>
+        <member name="F:TP6.ViewModels.MainViewModel.navigateToProfileCommand">
+            <summary>The backing field for <see cref="P:TP6.ViewModels.MainViewModel.NavigateToProfileCommand"/>.</summary>
+        </member>
+        <member name="P:TP6.ViewModels.MainViewModel.NavigateToProfileCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TP6.ViewModels.MainViewModel.NavigateToProfile"/>.</summary>
+        </member>
+        <member name="T:TP6.ViewModels.ProfileViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TP6.ViewModels.ProfileViewModel.CurrentUser">
+            <inheritdoc cref="F:TP6.ViewModels.ProfileViewModel.currentUser"/>
+        </member>
+        <member name="P:TP6.ViewModels.ProfileViewModel.IsEditing">
+            <inheritdoc cref="F:TP6.ViewModels.ProfileViewModel.isEditing"/>
+        </member>
+        <member name="P:TP6.ViewModels.ProfileViewModel.EditFirstName">
+            <inheritdoc cref="F:TP6.ViewModels.ProfileViewModel.editFirstName"/>
+        </member>
+        <member name="P:TP6.ViewModels.ProfileViewModel.EditLastName">
+            <inheritdoc cref="F:TP6.ViewModels.ProfileViewModel.editLastName"/>
+        </member>
+        <member name="F:TP6.ViewModels.ProfileViewModel.startEditCommand">
+            <summary>The backing field for <see cref="P:TP6.ViewModels.ProfileViewModel.StartEditCommand"/>.</summary>
+        </member>
+        <member name="P:TP6.ViewModels.ProfileViewModel.StartEditCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TP6.ViewModels.ProfileViewModel.StartEdit"/>.</summary>
+        </member>
+        <member name="F:TP6.ViewModels.ProfileViewModel.saveProfileCommand">
+            <summary>The backing field for <see cref="P:TP6.ViewModels.ProfileViewModel.SaveProfileCommand"/>.</summary>
+        </member>
+        <member name="P:TP6.ViewModels.ProfileViewModel.SaveProfileCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TP6.ViewModels.ProfileViewModel.SaveProfile"/>.</summary>
+        </member>
+        <member name="F:TP6.ViewModels.ProfileViewModel.cancelEditCommand">
+            <summary>The backing field for <see cref="P:TP6.ViewModels.ProfileViewModel.CancelEditCommand"/>.</summary>
+        </member>
+        <member name="P:TP6.ViewModels.ProfileViewModel.CancelEditCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TP6.ViewModels.ProfileViewModel.CancelEdit"/>.</summary>
+        </member>
+        <member name="F:TP6.ViewModels.ProfileViewModel.toggleNotificationsCommand">
+            <summary>The backing field for <see cref="P:TP6.ViewModels.ProfileViewModel.ToggleNotificationsCommand"/>.</summary>
+        </member>
+        <member name="P:TP6.ViewModels.ProfileViewModel.ToggleNotificationsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TP6.ViewModels.ProfileViewModel.ToggleNotifications"/>.</summary>
+        </member>
+        <member name="F:TP6.ViewModels.ProfileViewModel.toggleDarkModeCommand">
+            <summary>The backing field for <see cref="P:TP6.ViewModels.ProfileViewModel.ToggleDarkModeCommand"/>.</summary>
+        </member>
+        <member name="P:TP6.ViewModels.ProfileViewModel.ToggleDarkModeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TP6.ViewModels.ProfileViewModel.ToggleDarkMode"/>.</summary>
+        </member>
+        <member name="F:TP6.ViewModels.ProfileViewModel.goBackCommand">
+            <summary>The backing field for <see cref="P:TP6.ViewModels.ProfileViewModel.GoBackCommand"/>.</summary>
+        </member>
+        <member name="P:TP6.ViewModels.ProfileViewModel.GoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TP6.ViewModels.ProfileViewModel.GoBack"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Content">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Content" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentUser">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentUser" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsEditing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsEditing" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EditFirstName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EditFirstName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EditLastName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EditLastName" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Content">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Content" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentUser">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentUser" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsEditing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsEditing" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EditFirstName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EditFirstName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EditLastName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EditLastName" generated properties.</summary>
+        </member>
+    </members>
+</doc>
